@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -6,17 +8,17 @@
 }
 
 @font-face {
-    font-family: 'tituloFont';
-    src: url('./fonts/Daydream\ DEMO.otf'), format('otf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "tituloFont";
+  src: url("./fonts/Daydream\ DEMO.otf"), format("otf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'textFont';
-    src: url('./fonts/Minecraft.ttf'), format('ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "textFont";
+  src: url("./fonts/Minecraft.ttf"), format("ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -35,12 +37,12 @@ body {
 .container-links a {
   color: #eeeeee;
   margin: 0 12px 0 12px;
-  font-family: 'textFont';
+  font-family: "textFont";
   transition: all 0.3s ease-in-out;
 }
 
 .container-links a:hover {
-    color: #757575;
+  color: #757575;
 }
 
 .container-home {
@@ -68,30 +70,197 @@ body {
 }
 
 .text-content .title {
-    font-family: 'tituloFont';
-    margin: 18px 0;
+  font-family: "tituloFont";
+  margin: 18px 0;
 }
 
 .text-content .text {
-    font-family: 'textFont';
+  font-family: "textFont";
 }
 
 .btn-inscricao {
-    position: relative;
-    left: 50px;
-    top: 18px;
-    width: 400px;
-    border: none;
-    padding: 8px;
-    font-family: 'tituloFont';
-    border-radius: 30px;
-    color: #fffeec;
-    background: linear-gradient(to right, #01022c, #0a0368);
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+  position: relative;
+  left: 50px;
+  top: 18px;
+  width: 400px;
+  border: none;
+  padding: 8px;
+  font-family: "tituloFont";
+  border-radius: 30px;
+  color: #fffeec;
+  background: linear-gradient(to right, #01022c, #0a0368);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .btn-inscricao:hover {
-    background: #01022c;
-    color: #757575;
+  background: #01022c;
+  color: #757575;
+}
+
+.container-steam {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.titFont {
+  position: absolute;
+  top: 830px;
+  left: 300px;
+  color: #fffeec;
+  font-family: 'tituloFont';
+}
+
+.container-cards {
+  display: grid;
+  margin: 7% 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
+}
+
+.card {
+  width: 500px;
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(240, 240, 240, 0.6);
+  border-radius: 20px;
+}
+
+.card img {
+  width: 300px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.card .title {
+  font-family: "tituloFont";
+  text-align: center;
+  font-size: 20px;
+  color: #01022c;
+  margin: 8px 0;
+}
+
+.card .text {
+  font-family: "Lexend", sans-serif;
+  font-size: 14px;
+  width: 400px;
+  color: #01022c;
+  margin: 12px 0;
+}
+
+.btnMM .btnBuy{
+  width: 300px;
+  border: none;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 20px;
+  color: #fffeec;
+  background: linear-gradient(to right, #2421cc, #6164fc);
+  font-family: 'tituloFont';
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-playStation {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Adapitação Mobile para o site */
+
+@media (max-width: 740px) {
+  .contaiente-head {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 55%;
+
+    .container-links a {
+      font-family: "tituloFont", sans-serif;
+    }
+
+    .container-links a:hover {
+      color: #757575;
+    }
+  }
+  /*IMAGEM PC DESETIVADA*/
+  .image-bg img {
+    display: none;
+  }
+
+  .container-home {
+    height: 100vh;
+    background: url("./img/phone.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .text-content {
+      margin: 0 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 6%;
+    }
+
+    .text-content .title {
+      font-size: 100%;
+      text-align: center;
+    }
+
+    .text-content .text {
+      font-size: 98%;
+      text-align: center;
+    }
+
+    .btn-inscricao {
+      margin: 5% 0;
+      width: 100%;
+      position: relative;
+      left: 0;
+      background: linear-gradient(to right, #01022c, #0a0368);
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .btn-inscricao:hover {
+      background: #01022c;
+      color: #757575;
+    }
+  }
+
+  .container-steam {
+    height: 100vh;
+
+    .titFont {
+      position: relative;
+      top: 1.6%;
+      left: 20%;
+      font-size: 90%;
+      width: 60%;
+      margin: 6% 0;
+      text-align: center;
+    }
+
+    .container-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 16% 0;
+    }
+
+    .card .title {
+      font-size: 90%;
+    }
+
+    .card .text {
+      font-size: 70%;
+      width: 300px;
+    }
+  }
 }
